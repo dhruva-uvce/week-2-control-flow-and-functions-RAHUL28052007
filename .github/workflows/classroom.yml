@@ -1,0 +1,120 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Q01 — Grade Calculator
+      id: q01-grade-calculator
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Q01 — Grade Calculator
+        setup-command: pip install pytest
+        command: python -m pytest tests/test_q01.py -v
+        timeout: 30
+        max-score: 10
+    - name: Q02 — Leap Year Checker
+      id: q02-leap-year-checker
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Q02 — Leap Year Checker
+        setup-command: ''
+        command: python -m pytest tests/test_q02.py -v
+        timeout: 10
+        max-score: 10
+    - name: Q03 — Multiplication Table
+      id: q03-multiplication-table
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Q03 — Multiplication Table
+        setup-command: ''
+        command: python -m pytest tests/test_q03.py -v
+        timeout: 10
+        max-score: 10
+    - name: Q04 — Star Pattern
+      id: q04-star-pattern
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Q04 — Star Pattern
+        setup-command: ''
+        command: python -m pytest tests/test_q04.py -v
+        timeout: 10
+        max-score: 10
+    - name: Q05 — FizzBuzz
+      id: q05-fizzbuzz
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Q05 — FizzBuzz
+        setup-command: ''
+        command: python -m pytest tests/test_q05.py -v
+        timeout: 10
+        max-score: 10
+    - name: Q06 — Factorial
+      id: q06-factorial
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Q06 — Factorial
+        setup-command: ''
+        command: python -m pytest tests/test_q06.py -v
+        timeout: 10
+        max-score: 10
+    - name: Q07 — Reverse a Number
+      id: q07-reverse-a-number
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Q07 — Reverse a Number
+        setup-command: ''
+        command: python -m pytest tests/test_q07.py -v
+        timeout: 10
+        max-score: 10
+    - name: Q08 — Sum of Digits
+      id: q08-sum-of-digits
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Q08 — Sum of Digits
+        setup-command: ''
+        command: python -m pytest tests/test_q08.py -v
+        timeout: 10
+        max-score: 10
+    - name: Q09 — Functions with Default Parameters
+      id: q09-functions-with-default-parameters
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Q09 — Functions with Default Parameters
+        setup-command: ''
+        command: python -m pytest tests/test_q09.py -v
+        timeout: 10
+        max-score: 10
+    - name: Q10 - Call by Reference
+      id: q10-call-by-reference
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Q10 - Call by Reference
+        setup-command: ''
+        command: python -m pytest tests/test_q10.py -v
+        timeout: 10
+        max-score: 10
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        Q01-GRADE-CALCULATOR_RESULTS: "${{steps.q01-grade-calculator.outputs.result}}"
+        Q02-LEAP-YEAR-CHECKER_RESULTS: "${{steps.q02-leap-year-checker.outputs.result}}"
+        Q03-MULTIPLICATION-TABLE_RESULTS: "${{steps.q03-multiplication-table.outputs.result}}"
+        Q04-STAR-PATTERN_RESULTS: "${{steps.q04-star-pattern.outputs.result}}"
+        Q05-FIZZBUZZ_RESULTS: "${{steps.q05-fizzbuzz.outputs.result}}"
+        Q06-FACTORIAL_RESULTS: "${{steps.q06-factorial.outputs.result}}"
+        Q07-REVERSE-A-NUMBER_RESULTS: "${{steps.q07-reverse-a-number.outputs.result}}"
+        Q08-SUM-OF-DIGITS_RESULTS: "${{steps.q08-sum-of-digits.outputs.result}}"
+        Q09-FUNCTIONS-WITH-DEFAULT-PARAMETERS_RESULTS: "${{steps.q09-functions-with-default-parameters.outputs.result}}"
+        Q10-CALL-BY-REFERENCE_RESULTS: "${{steps.q10-call-by-reference.outputs.result}}"
+      with:
+        runners: q01-grade-calculator,q02-leap-year-checker,q03-multiplication-table,q04-star-pattern,q05-fizzbuzz,q06-factorial,q07-reverse-a-number,q08-sum-of-digits,q09-functions-with-default-parameters,q10-call-by-reference
