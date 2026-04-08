@@ -1,0 +1,104 @@
+{
+  "tests": [
+    {
+      "name": "Q01 — Grade Calculator",
+      "setup": "pip install pytest",
+      "run": "python -m pytest tests/test_q01.py -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Q02 — Leap Year Checker",
+      "setup": "",
+      "run": "python -m pytest tests/test_q02.py -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Q03 — Multiplication Table",
+      "setup": "",
+      "run": "python -m pytest tests/test_q03.py -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Q04 — Star Pattern",
+      "setup": "",
+      "run": "python -m pytest tests/test_q04.py -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Q05 — FizzBuzz",
+      "setup": "",
+      "run": "python -m pytest tests/test_q05.py -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Q06 — Factorial",
+      "setup": "",
+      "run": "python -m pytest tests/test_q06.py -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Q07 — Reverse a Number",
+      "setup": "",
+      "run": "python -m pytest tests/test_q07.py -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Q08 — Sum of Digits",
+      "setup": "",
+      "run": "python -m pytest tests/test_q08.py -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Q09 — Functions with Default Parameters",
+      "setup": "",
+      "run": "python -m pytest tests/test_q09.py -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    },
+    {
+      "name": "Q10 — Call by Reference",
+      "setup": "",
+      "run": "python -m pytest tests/test_q10.py -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 30,
+      "points": 10
+    }
+  ]
+}
