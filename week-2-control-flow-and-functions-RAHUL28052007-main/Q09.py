@@ -15,17 +15,10 @@
 #   power(2, 10)            → 1024
 
 
-def greet(name, greeting="Hello"):
-    # --- YOUR CODE HERE ---
-    pass
 
+    # --- YOUR CODE HERE ---
+def greet(name, greeting="Hello"):
+    return f"{greeting}, {name}!"
 
 def power(base, exp=2):
-    # --- YOUR CODE HERE ---
-    pass
-
-
-if __name__ == "__main__":
-    # Call the functions and print results
-    # --- YOUR CODE HERE ---
-    pass
+    return base ** exp

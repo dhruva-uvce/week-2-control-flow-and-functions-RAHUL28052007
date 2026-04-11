@@ -12,3 +12,5 @@
 #   *****
 
 # --- YOUR CODE HERE ---
+def star_pattern(n):
+    return ["*" * i for i in range(1, n + 1)]

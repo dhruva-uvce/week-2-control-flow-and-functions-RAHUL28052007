@@ -14,17 +14,12 @@
 #   3. Call double_elements(numbers) and print the list → [2, 4, 6, 8]
 
 
-def add_element(lst, element):
+
     # --- YOUR CODE HERE ---
-    pass
+def add_element(lst, element):
+    lst.append(element)
 
 
 def double_elements(lst):
-    # --- YOUR CODE HERE ---
-    pass
-
-
-if __name__ == "__main__":
-    # Demonstrate call by reference
-    # --- YOUR CODE HERE ---
-    pass
+    for i in range(len(lst)):
+        lst[i] = lst[i] * 2  

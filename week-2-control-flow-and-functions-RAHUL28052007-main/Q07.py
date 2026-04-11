@@ -10,3 +10,11 @@
 # Sample Output 2:  Reversed: 5
 
 # --- YOUR CODE HERE ---
+def reverse_number(n):
+    if n == 0:
+        return 0
+    rev = 0
+    while n > 0:
+        rev = rev * 10 + (n % 10)
+        n //= 10
+    return rev

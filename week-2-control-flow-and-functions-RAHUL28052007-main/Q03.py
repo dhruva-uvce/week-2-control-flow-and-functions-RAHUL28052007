@@ -11,3 +11,5 @@
 #   5 x 10 = 50
 
 # --- YOUR CODE HERE ---
+def multiplication_table(n):
+    return [f"{n} x {i} = {n*i}" for i in range(1, 11)]
