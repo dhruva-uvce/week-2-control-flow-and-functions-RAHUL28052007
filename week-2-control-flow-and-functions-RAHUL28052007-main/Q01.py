@@ -15,7 +15,6 @@
 
 # --- YOUR CODE HERE ---
 score = int(input("Enter your score: "))
-
 if score < 0 or score > 100:
     print("Invalid score")
 elif score >= 90:
