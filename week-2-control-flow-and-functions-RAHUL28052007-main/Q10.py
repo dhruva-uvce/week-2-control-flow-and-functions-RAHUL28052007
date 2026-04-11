@@ -20,20 +20,6 @@ def add_element(lst, element):
     lst.append(element)
 
 
-
-    # --- YOUR CODE HERE ---
-   
 def double_elements(lst):
     for i in range(len(lst)):
-        lst[i] = lst[i] * 2
-
-
-
-    # Demonstrate call by reference
-    # --- YOUR CODE HERE ---
-numbers = [1, 2, 3]
-
-add_element(numbers, 4)
-print(numbers)  
-double_elements(numbers)
-print(numbers)   
+        lst[i] = lst[i] * 2  

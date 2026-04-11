@@ -18,20 +18,7 @@
 
     # --- YOUR CODE HERE ---
 def greet(name, greeting="Hello"):
-    return greeting + ", " + name+"!"
+    return f"{greeting}, {name}!"
 
-
-
-    # --- YOUR CODE HERE ---
 def power(base, exp=2):
     return base ** exp
-
-
-
-
-    # Call the functions and print results
-    # --- YOUR CODE HERE ---
-print(greet("Alice"))        
-print(greet("Bob", "Hi"))    
-print(power(5))              
-print(power(2, 10)) 

@@ -10,13 +10,11 @@
 # Sample Output 2:  Reversed: 5
 
 # --- YOUR CODE HERE ---
-n = int(input("Enter a number: "))
-
-rev = 0
-
-while n > 0:
-    digit = n % 10
-    rev = rev * 10 + digit
-    n = n // 10
-
-print("Reversed:", rev)
+def reverse_number(n):
+    if n == 0:
+        return 0
+    rev = 0
+    while n > 0:
+        rev = rev * 10 + (n % 10)
+        n //= 10
+    return rev

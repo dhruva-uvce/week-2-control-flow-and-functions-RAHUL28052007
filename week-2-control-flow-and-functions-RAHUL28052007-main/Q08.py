@@ -7,14 +7,9 @@
 # Sample Output:  Sum of digits of 9876 = 30
 
 # --- YOUR CODE HERE ---
-n = int(input("Enter a number: "))
-
-sum_digits = 0
-temp = n   # store original number
-
-while temp > 0:
-    digit = temp % 10
-    sum_digits = sum_digits + digit
-    temp = temp // 10
-
-print("Sum of digits of", n, "=", sum_digits)
+def sum_of_digits(n):
+    total = 0
+    while n > 0:
+        total += n % 10
+        n //= 10
+    return total
